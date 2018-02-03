@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
 MainWindow::~MainWindow()
 {
-    delete ui;
+    delete ui;lkj
 }
 
 void MainWindow::on_pushButtonLogin_clicked()
@@ -22,6 +22,8 @@ void MainWindow::on_pushButtonLogin_clicked()
     if ((username == "test") && (password == "test"))
     {
         QMessageBox::information(this, "Login", "Username and password are correct");
+        dialog = new Dialog(this);
+        dialog->show();
     }
     else
     {
