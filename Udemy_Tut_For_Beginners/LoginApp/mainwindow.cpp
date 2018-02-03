@@ -1,17 +1,21 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+
 #include <QMessageBox>
+#include <QPixmap>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    QPixmap pix("D:/Work/Angular/cps-data/trunk/client/src/assets/logo.png");
+    ui->labelPicture->setPixmap(pix);
 }
 
 MainWindow::~MainWindow()
 {
-    delete ui;lkj
+    delete ui;
 }
 
 void MainWindow::on_pushButtonLogin_clicked()
