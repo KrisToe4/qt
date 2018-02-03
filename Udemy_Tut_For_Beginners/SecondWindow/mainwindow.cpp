@@ -17,7 +17,6 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    MyDialog myDialog;
-    myDialog.setModal(true);
-    myDialog.exec();
+    myDialog = new MyDialog(this);
+    myDialog->show();
 }
