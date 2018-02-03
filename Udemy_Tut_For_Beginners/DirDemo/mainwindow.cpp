@@ -10,14 +10,9 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QDir dir("C:/Users");
-    if (dir.exists())
-    {
-        QMessageBox::information(this, "Title", "True");
-    }
-    else
-    {
-        QMessageBox::information(this, "Title", "False");
+    QDir dir;
+    foreach (QFileInfo info, dir.drives()) {
+        ui->comboBox->addItem(info.absoluteFilePath());
     }
 }
 
