@@ -19,6 +19,8 @@ MainWindow::MainWindow(QWidget *parent) :
     {
         ui->comboBox->addItem(QIcon(":/resource/img/green-light.png"), QString::number(i) + "name");
     }
+
+    ui->comboBox->insertItem(3, QIcon(":/resource/img/green-light.png"), "New Text");
 }
 
 MainWindow::~MainWindow()
