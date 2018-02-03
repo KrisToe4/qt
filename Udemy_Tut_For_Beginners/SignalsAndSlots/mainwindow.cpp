@@ -20,5 +20,11 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    QMessageBox::about(this, "My Message Box", "This is a message box.");
+    //void              about
+    //void              aboutQt
+    //StandardButton    critical
+    //StandardButton    information
+    //StandardButton    question
+    //StardardButton    warning
+    QMessageBox::aboutQt(this, "My Message Box");
 }
