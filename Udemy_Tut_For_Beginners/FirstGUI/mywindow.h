@@ -15,6 +15,9 @@ public:
     explicit MyWindow(QWidget *parent = 0);
     ~MyWindow();
 
+private slots:
+    void on_pushButtonClose_clicked();
+
 private:
     Ui::MyWindow *ui;
 };

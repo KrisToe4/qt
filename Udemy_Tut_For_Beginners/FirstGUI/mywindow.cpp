@@ -12,3 +12,8 @@ MyWindow::~MyWindow()
 {
     delete ui;
 }
+
+void MyWindow::on_pushButtonClose_clicked()
+{
+    ui->label->setText("Button was clicked!");
+}
