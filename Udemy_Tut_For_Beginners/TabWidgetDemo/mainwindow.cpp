@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
+#include "form.h"
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -20,5 +22,6 @@ void MainWindow::on_tabWidget_tabCloseRequested(int index)
 
 void MainWindow::on_pushButton_clicked()
 {
-    ui->tabWidget->addTab(new QWidget(), QString("Tab %0").arg(ui->tabWidget->count() + 1));
+    ui->tabWidget->addTab(new Form(), QString("Tab %0").arg(ui->tabWidget->count() + 1));
+    ui->tabWidget->setCurrentIndex(ui->tabWidget->count() - 1);
 }
