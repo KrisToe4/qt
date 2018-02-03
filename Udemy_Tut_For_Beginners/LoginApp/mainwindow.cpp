@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    QPixmap pix("D:/Work/Angular/cps-data/trunk/client/src/assets/logo.png");
+    QPixmap pix(":/resources/img/logo.png");
     int width = ui->labelPicture->width();
     int height = ui->labelPicture->height();
     ui->labelPicture->setPixmap(pix.scaled(width,height,Qt::KeepAspectRatio));
