@@ -17,6 +17,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
+    hide();
     myDialog = new MyDialog(this);
     myDialog->show();
 }
