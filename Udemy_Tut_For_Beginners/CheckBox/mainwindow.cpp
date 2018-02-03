@@ -25,3 +25,14 @@ void MainWindow::on_pushButton_clicked()
         QMessageBox::information(this, "Result", "User doesn't like Apples.");
     }
 }
+
+void MainWindow::on_checkBox_stateChanged(int arg1)
+{
+    if (arg1)
+    {
+        QMessageBox::information(this, "Result", "User Likes Apples.");
+    }
+    else {
+        QMessageBox::information(this, "Result", "User doesn't like Apples.");
+    }
+}
