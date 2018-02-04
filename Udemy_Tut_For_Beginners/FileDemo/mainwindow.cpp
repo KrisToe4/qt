@@ -38,7 +38,8 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    QString fileName = QFileDialog::getOpenFileName(this, "Save File", "D://");
+    QString filter = "All Files (*.*) ;; Text Files (*.txt) ;; XML Files (*.xml)";
+    QString fileName = QFileDialog::getOpenFileName(this, "Save File", "D://", filter);
     QFile file(fileName);
 
     if (!file.open(QFile::ReadOnly | QFile::Text))
