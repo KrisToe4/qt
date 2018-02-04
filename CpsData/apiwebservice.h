@@ -17,7 +17,7 @@ signals:
     void InvalidAuthToken();
 
 public slots:
-    QString RequestAuthToken(TechCredential credentials);
+    QString RequestAuthToken(const TechCredential credentials);
 
 private slots:
     void ResolveApiRoot(const QHostInfo &host);

@@ -10,7 +10,7 @@ ApiWebService::ApiWebService(QObject *parent) : QObject(parent)
     }
 }
 
-QString ApiWebService::RequestAuthToken(TechCredential credentials)
+QString ApiWebService::RequestAuthToken(const TechCredential credentials)
 {
     m_AuthToken = "token";
 
@@ -22,14 +22,14 @@ void ApiWebService::ResolveApiRoot(const QHostInfo &host)
     // From http://doc.qt.io/qt-5/qhostinfo.html#lookupHost
     if (host.error() != QHostInfo::NoError)
     {
-        qDebug() << "Lookup failed:" << host.errorString();
+        qDebug() << QObject::tr("Lookup failed:") << host.errorString();
         return;
     }
 
     const auto addresses = host.addresses();
     if (addresses.length() > 0)
     {
-        qDebug() << "Found address:" << addresses[0].toString();
+        qDebug() << QObject::tr("Found address:") << addresses[0].toString();
         this->m_ApiRootAddress = addresses[0];
     }
 
