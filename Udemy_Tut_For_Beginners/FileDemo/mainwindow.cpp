@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 
 #include <QTextStream>
+#include <QFileDialog>
 #include <QFile>
 #include <QMessageBox>
 
@@ -19,7 +20,8 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    QFile file("D:/Work/Surge/qt/Udemy_Tut_For_Beginners/FileDemo/test.txt");
+    QString fileName = QFileDialog::getSaveFileName(this, "Save File", "D://");
+    QFile file(fileName);
 
     if (!file.open(QFile::WriteOnly | QFile::Text))
     {
@@ -36,7 +38,8 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    QFile file("D:/Work/Surge/qt/Udemy_Tut_For_Beginners/FileDemo/test.txt");
+    QString fileName = QFileDialog::getOpenFileName(this, "Save File", "D://");
+    QFile file(fileName);
 
     if (!file.open(QFile::ReadOnly | QFile::Text))
     {
