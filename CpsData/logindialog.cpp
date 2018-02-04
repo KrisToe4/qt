@@ -16,6 +16,5 @@ LoginDialog::~LoginDialog()
 void LoginDialog::on_buttonBox_accepted()
 {
     TechCredential credentials(ui->lineEditEmail->text(), ui->lineEditPwd->text());
-
-    this->AuthRequest = credentials.GenerateAuthRequest();
+    emit CredentialsValidated(credentials);
 }

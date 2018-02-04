@@ -27,12 +27,14 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     logindialog.cpp \
-    techcredential.cpp
+    techcredential.cpp \
+    apiwebservice.cpp
 
 HEADERS += \
         mainwindow.h \
     logindialog.h \
-    techcredential.h
+    techcredential.h \
+    apiwebservice.h
 
 FORMS += \
         mainwindow.ui \

@@ -22,6 +22,9 @@ public:
 
     QJsonObject AuthRequest;
 
+signals:
+    void CredentialsValidated(TechCredential credentials);
+
 private slots:
     void on_buttonBox_accepted();
 
