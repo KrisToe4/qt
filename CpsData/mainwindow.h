@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QTimer>
 
 namespace Ui {
 class MainWindow;
@@ -17,7 +18,7 @@ public:
 
 private:
     Ui::MainWindow *ui;
-    Ui::QString m_ApiAuthToken;
+    QString m_ApiAuthToken;
 
 };
 
