@@ -6,6 +6,8 @@
 #include <QJsonObject>
 #include <QJsonDocument>
 
+#include "techcredential.h"
+
 namespace Ui {
 class LoginDialog;
 }
