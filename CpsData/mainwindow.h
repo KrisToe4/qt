@@ -17,6 +17,8 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    Ui::QString m_ApiAuthToken;
+
 };
 
 #endif // MAINWINDOW_H
