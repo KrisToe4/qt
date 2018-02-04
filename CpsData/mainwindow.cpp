@@ -15,6 +15,8 @@ MainWindow::MainWindow(QWidget *parent) :
         LoginDialog loginDialog(this);
         if (loginDialog.exec() == QDialog::Accepted)
         {
+            QJsonObject authRequest = loginDialog.AuthRequest;
+
             m_ApiAuthToken = "Token";
         }
         else

@@ -2,6 +2,9 @@
 #define LOGINDIALOG_H
 
 #include <QDialog>
+#include <QJsonValue>
+#include <QJsonObject>
+#include <QJsonDocument>
 
 namespace Ui {
 class LoginDialog;
@@ -14,6 +17,11 @@ class LoginDialog : public QDialog
 public:
     explicit LoginDialog(QWidget *parent = 0);
     ~LoginDialog();
+
+    QJsonObject AuthRequest;
+
+private slots:
+    void on_buttonBox_accepted();
 
 private:
     Ui::LoginDialog *ui;
