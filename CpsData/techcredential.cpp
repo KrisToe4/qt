@@ -33,7 +33,7 @@ QJsonObject TechCredential::GenerateAuthRequest()
     {
         qMakePair(QString("type"), QJsonValue("local")),
         qMakePair(QString("value"), QJsonValue(this->m_jCredentials)),
-        qMakePair(QString("ip"), QJsonValue("127.0.0.1"))
+        qMakePair(QString("ip"), QJsonValue(this->m_LocalIp.toString()))
     };
 
     return authRequest;
