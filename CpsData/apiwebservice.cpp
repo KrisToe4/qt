@@ -1,8 +1,14 @@
 #include "apiwebservice.h"
+#include "utils.h"
 
 ApiWebService::ApiWebService(QObject *parent) : QObject(parent)
 {
     QHostInfo::lookupHost(this->API_ADDRESS, this, SLOT(ResolveApiRoot(QHostInfo)));
+}
+
+ApiWebService::~ApiWebService()
+{
+    Utils::DestructorMsg(this);
 }
 
 QString ApiWebService::GetAuthToken()

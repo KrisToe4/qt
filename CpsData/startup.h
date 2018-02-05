@@ -9,6 +9,7 @@ class Startup : public QObject
     Q_OBJECT
 public:
     explicit Startup();
+    ~Startup();
 
     void show();
 private:

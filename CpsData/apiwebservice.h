@@ -11,6 +11,7 @@ class ApiWebService : public QObject
     Q_OBJECT
 public:
     explicit ApiWebService(QObject *parent = nullptr);
+    ~ApiWebService();
 
     QString GetAuthToken();
 

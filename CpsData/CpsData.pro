@@ -31,14 +31,16 @@ SOURCES += \
     logindialog.cpp \
     techcredential.cpp \
     apiwebservice.cpp \
-    startup.cpp
+    startup.cpp \
+    utils.cpp
 
 HEADERS += \
         mainwindow.h \
     logindialog.h \
     techcredential.h \
     apiwebservice.h \
-    startup.h
+    startup.h \
+    utils.h
 
 FORMS += \
         mainwindow.ui \

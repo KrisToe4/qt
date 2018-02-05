@@ -8,6 +8,7 @@ class TechCredential
 public:
     explicit TechCredential();
     TechCredential(const QString sEmail, const QString sPassword); // Simple Credentials
+    ~TechCredential();
 
     QJsonObject GenerateAuthRequest();
 

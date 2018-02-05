@@ -1,10 +1,16 @@
 #include "techcredential.h"
+#include "utils.h"
 
 TechCredential::TechCredential()
 {
     this->m_sType = "";
     this->m_jCredentials = {};
     this->m_LocalIp = QHostAddress::LocalHost;
+}
+
+TechCredential::~TechCredential()
+{
+    Utils::DestructorMsg("Tech Credentials Destructor.");
 }
 
 TechCredential::TechCredential(QString const sEmail, QString const sPassword) : TechCredential()

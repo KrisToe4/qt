@@ -1,11 +1,16 @@
 #include "startup.h"
 #include "mainwindow.h"
+#include "utils.h"
 
 Startup::Startup() :
     QObject(nullptr),
     m_mainWindow(*new MainWindow(nullptr))
-{
+{}
 
+Startup::~Startup()
+{
+    Utils::DestructorMsg(this);
+    delete &m_mainWindow;
 }
 
 void Startup::show()
