@@ -26,6 +26,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-
     ApiWebService *api;
+
 };

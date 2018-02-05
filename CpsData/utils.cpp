@@ -5,12 +5,12 @@
 
 static QString DESTRUCTOR_MSG = QStringLiteral("Running the %1 destructor.");
 
-void Utils::DestructorMsg(QString value)
+void Utils::DestructorMsg(const QString &value)
 {
     qDebug() << DESTRUCTOR_MSG.arg(value);
 }
 
-void Utils::DestructorMsg(QObject* object)
+void Utils::DestructorMsg(const QObject* const object)
 {
     DestructorMsg(object->metaObject()->className());
 }
