@@ -19,7 +19,6 @@ MainWindow::~MainWindow()
 {
     Utils::DestructorMsg(this);
     delete ui;
-    delete api;
 }
 
 
