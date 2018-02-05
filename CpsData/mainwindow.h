@@ -6,26 +6,30 @@
 #include "apiwebservice.h"
 #include "techcredential.h"
 
-namespace Ui {
-class MainWindow;
+namespace Ui
+{
+    class MainWindow;
 }
 
-class MainWindow : public QMainWindow
+namespace CpsData
 {
-    Q_OBJECT
+    class MainWindow : public QMainWindow
+    {
+        Q_OBJECT
 
-public:
-    explicit MainWindow(QWidget *parent);
-    ~MainWindow();
+    public:
+        explicit MainWindow(QWidget *parent);
+        ~MainWindow();
 
-public slots:
-    void RequestCredentials();
+    public slots:
+        void RequestCredentials();
 
-private slots:
-    void on_actionQuit_triggered();
+    private slots:
+        void on_actionQuit_triggered();
 
-private:
-    Ui::MainWindow *ui;
-    ApiWebService *api;
+    private:
+        Ui::MainWindow *ui;
+        ApiWebService *api;
 
-};
+    };
+}

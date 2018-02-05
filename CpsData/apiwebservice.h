@@ -6,28 +6,31 @@
 
 #include "techcredential.h"
 
-class ApiWebService : public QObject
+namespace CpsData
 {
-    Q_OBJECT
-public:
-    explicit ApiWebService(QObject *parent = nullptr);
-    ~ApiWebService();
+    class ApiWebService : public QObject
+    {
+        Q_OBJECT
+    public:
+        explicit ApiWebService(QObject *parent = nullptr);
+        ~ApiWebService();
 
-    QString GetAuthToken();
+        QString GetAuthToken();
 
-signals:
-    void InvalidAuthToken();
+    signals:
+        void InvalidAuthToken();
 
-public slots:
-    QString RequestAuthToken(const TechCredential credentials);
+    public slots:
+        QString RequestAuthToken(const TechCredential credentials);
 
-private slots:
-    void ResolveApiRoot(const QHostInfo &host);
+    private slots:
+        void ResolveApiRoot(const QHostInfo &host);
 
-private:
-    QString const API_ADDRESS = "dev.cps-data.com";
-    QString const API_ROOT = "/api/";
-    QHostAddress m_ApiRootAddress;
+    private:
+        QString const API_ADDRESS = "dev.cps-data.com";
+        QString const API_ROOT = "/api/";
+        QHostAddress m_ApiRootAddress;
 
-    QString m_AuthToken;
-};
+        QString m_AuthToken;
+    };
+}

@@ -3,21 +3,24 @@
 #include <QHostInfo>
 #include <QJsonObject>
 
-class TechCredential
+namespace CpsData
 {
-public:
-    explicit TechCredential();
-    TechCredential(const QString sEmail, const QString sPassword); // Simple Credentials
-    ~TechCredential();
+    class TechCredential
+    {
+    public:
+        explicit TechCredential();
+        TechCredential(const QString sEmail, const QString sPassword); // Simple Credentials
+        ~TechCredential();
 
-    QJsonObject GenerateAuthRequest();
+        QJsonObject GenerateAuthRequest();
 
-signals:
+    signals:
 
-public slots:
+    public slots:
 
-private:
-    QString m_sType;
-    QJsonObject m_jCredentials;
-    QHostAddress m_LocalIp;
-};
+    private:
+        QString m_sType;
+        QJsonObject m_jCredentials;
+        QHostAddress m_LocalIp;
+    };
+}

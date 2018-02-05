@@ -2,18 +2,21 @@
 #include "mainwindow.h"
 #include "utils.h"
 
-Startup::Startup() :
-    QObject(nullptr),
-    m_mainWindow(*new MainWindow(nullptr))
-{}
-
-Startup::~Startup()
+namespace CpsData
 {
-    Utils::DestructorMsg(this);
-    delete &m_mainWindow;
-}
+    Startup::Startup() :
+        QObject(nullptr),
+        m_mainWindow(*new MainWindow(nullptr))
+    {}
 
-void Startup::show()
-{
-    m_mainWindow.show();
+    Startup::~Startup()
+    {
+        Utils::DestructorMsg(this);
+        delete &m_mainWindow;
+    }
+
+    void Startup::show()
+    {
+        m_mainWindow.show();
+    }
 }
