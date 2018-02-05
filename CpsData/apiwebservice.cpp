@@ -2,7 +2,7 @@
 
 ApiWebService::ApiWebService(QObject *parent) : QObject(parent)
 {
-    QHostInfo::lookupHost(this->API_ROOT, this, SLOT(ResolveApiRoot(QHostInfo)));
+    QHostInfo::lookupHost(this->API_ADDRESS, this, SLOT(ResolveApiRoot(QHostInfo)));
 }
 
 QString ApiWebService::GetAuthToken()

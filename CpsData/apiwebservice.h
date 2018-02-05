@@ -25,7 +25,8 @@ private slots:
     void ResolveApiRoot(const QHostInfo &host);
 
 private:
-    QString const API_ROOT = "http://localhost:3000/api/";
+    QString const API_ADDRESS = "dev.cps-data.com";
+    QString const API_ROOT = "/api/";
     QHostAddress m_ApiRootAddress;
 
     QString m_AuthToken;
