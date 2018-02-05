@@ -32,7 +32,9 @@ SOURCES += \
     techcredential.cpp \
     apiwebservice.cpp \
     startup.cpp \
-    utils.cpp
+    utils.cpp \
+    settings.cpp \
+    provider.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -40,8 +42,13 @@ HEADERS += \
     techcredential.h \
     apiwebservice.h \
     startup.h \
-    utils.h
+    utils.h \
+    settings.h \
+    provider.h
 
 FORMS += \
         mainwindow.ui \
     logindialog.ui
+
+RESOURCES += \
+    resources.qrc

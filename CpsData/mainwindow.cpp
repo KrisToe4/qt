@@ -11,7 +11,7 @@ namespace CpsData
         api(new ApiWebService(this))
     {
         ui->setupUi(this);
-        this->setCentralWidget(ui->tableWidget);
+        this->setCentralWidget(ui->tblTechList);
 
         QObject::connect(api, SIGNAL (InvalidAuthToken()), this, SLOT(RequestCredentials()));
         api->GetAuthToken();
