@@ -5,12 +5,14 @@
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow),
+    api(new ApiWebService(this))
 {
     ui->setupUi(this);
     this->setCentralWidget(ui->tableWidget);
 
     QObject::connect(api, SIGNAL (InvalidAuthToken()), this, SLOT(RequestCredentials()));
+    api->GetAuthToken();
 }
 
 MainWindow::~MainWindow()

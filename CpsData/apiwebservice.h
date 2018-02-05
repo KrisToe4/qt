@@ -13,6 +13,8 @@ class ApiWebService : public QObject
 public:
     explicit ApiWebService(QObject *parent = nullptr);
 
+    QString GetAuthToken();
+
 signals:
     void InvalidAuthToken();
 

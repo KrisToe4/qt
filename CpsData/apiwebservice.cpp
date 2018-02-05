@@ -2,12 +2,17 @@
 
 ApiWebService::ApiWebService(QObject *parent) : QObject(parent)
 {
-    QHostInfo::lookupHost(this->API_ROOT, this, SLOT(resolveApiRoot(QHostInfo)));
+    QHostInfo::lookupHost(this->API_ROOT, this, SLOT(ResolveApiRoot(QHostInfo)));
+}
 
+QString ApiWebService::GetAuthToken()
+{
     if (m_AuthToken == "")
     {
         emit InvalidAuthToken();
     }
+
+    return m_AuthToken;
 }
 
 QString ApiWebService::RequestAuthToken(const TechCredential credentials)
@@ -23,6 +28,7 @@ void ApiWebService::ResolveApiRoot(const QHostInfo &host)
     if (host.error() != QHostInfo::NoError)
     {
         qDebug() << QObject::tr("Lookup failed:") << host.errorString();
+        this->m_ApiRootAddress = QHostAddress::LocalHost;
         return;
     }
 
