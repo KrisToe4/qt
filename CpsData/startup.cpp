@@ -1,5 +1,5 @@
 #include "startup.h"
-#include "mainwindow.h";
+#include "mainwindow.h"
 
 Startup::Startup() :
     QObject(nullptr),

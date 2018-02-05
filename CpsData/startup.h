@@ -1,5 +1,4 @@
-#ifndef STARTUP_H
-#define STARTUP_H
+#pragma once
 
 #include <QObject>
 
@@ -15,5 +14,3 @@ public:
 private:
     MainWindow& m_mainWindow;
 };
-
-#endif // STARTUP_H

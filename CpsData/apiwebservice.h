@@ -1,5 +1,4 @@
-#ifndef APIWEBSERVICE_H
-#define APIWEBSERVICE_H
+#pragma once
 
 #include <QObject>
 #include <QHostInfo>
@@ -31,5 +30,3 @@ private:
 
     QString m_AuthToken;
 };
-
-#endif // APIWEBSERVICE_H

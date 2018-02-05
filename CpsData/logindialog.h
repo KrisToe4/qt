@@ -1,5 +1,4 @@
-#ifndef LOGINDIALOG_H
-#define LOGINDIALOG_H
+#pragma once
 
 #include <QDialog>
 #include <QJsonValue>
@@ -31,5 +30,3 @@ private slots:
 private:
     Ui::LoginDialog *ui;
 };
-
-#endif // LOGINDIALOG_H

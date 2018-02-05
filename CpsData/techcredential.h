@@ -1,5 +1,4 @@
-#ifndef TECHCREDENTIAL_H
-#define TECHCREDENTIAL_H
+#pragma once
 
 #include <QHostInfo>
 #include <QJsonObject>
@@ -21,5 +20,3 @@ private:
     QJsonObject m_jCredentials;
     QHostAddress m_LocalIp;
 };
-
-#endif // TECHCREDENTIAL_H
